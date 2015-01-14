@@ -3,7 +3,6 @@
 
 require 'torch'
 require 'optim'
-require 'optimx'
 
 local algo = torch.class('optimbench.algo')
 
@@ -11,7 +10,7 @@ local algo = torch.class('optimbench.algo')
 
 Parameters:
  * `algoname` - the name of the algorithm
- * `optim_algo_name` - the name of the function that implements the algorithm in optim or optimx OR an instance of the implementation function
+ * `optim_algo_name` - the name of the function that implements the algorithm in optim OR an instance of the implementation function
  * `config` - a table with the configuration of the algorithm
 
 Example:
