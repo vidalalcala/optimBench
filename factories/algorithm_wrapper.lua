@@ -64,7 +64,7 @@ function algo:minimise(fun, xo, steps)
 		xo = torch.Tensor({xo})
 	end
 	
-	local algorithm = optim[self.optim_algo_name] or optimx[self.optim_algo_name] or self.optim_algo_name -- in case it is a function !!
+	local algorithm = optim[self.optim_algo_name] or self.optim_algo_name -- in case it is a function !!
 
 	if not algorithm or type(algorithm) ~= 'function' then
 		error('Could not find algorithm implementation !')

@@ -21,13 +21,13 @@ local algorithms={
 	sgd_annealing= {fun='sgd', learningRate=parameters.learningRate, learningRateDecay=parameters.learningRateDecay},
 	sgd_momentum= {fun='sgd', learningRate=parameters.learningRate, momentum=parameters.momentum},
 	sgd_averaging= {fun='asgd', eta0=parameters.learningRate, lambda=parameters.lambda, alpha=parameters.alpha, t0=0},
-	sgd_nesterov= {fun='nesterov', learningRate=parameters.learningRate, momentum=parameters.momentum},
-	rmsprop= {fun='rmsprop', learningRate=parameters.learningRate, decay=parameters.decay, maxLearningRate=parameters.maxLearningRate},
+	--sgd_nesterov= {fun='nesterov', learningRate=parameters.learningRate, momentum=parameters.momentum},
+	--rmsprop= {fun='rmsprop', learningRate=parameters.learningRate, decay=parameters.decay, maxLearningRate=parameters.maxLearningRate},
 	rprop= {fun='rprop', stepsize=parameters.stepsize},
 	adagrad= {fun='adagrad', learningRate=parameters.learningRate},
-	adadelta= {fun='adadelta', decay=parameters.decay, epsilon=parameters.epsilon},
-	cg= {fun='cg'},
-	idbd= {fun='idbd'}
+	--adadelta= {fun='adadelta', decay=parameters.decay, epsilon=parameters.epsilon},
+	--cg= {fun='cg'},
+	--idbd= {fun='idbd'}
 }
 
 local algorithms_list={}

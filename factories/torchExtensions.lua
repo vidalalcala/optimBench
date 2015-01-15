@@ -1,5 +1,4 @@
 require 'torch'
-require 'torchffi'
 
 --[[ Utility function that computes the sign of a number ]]--
 function math.sign(x)
