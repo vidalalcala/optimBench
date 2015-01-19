@@ -5,7 +5,7 @@ require 'torch'
 local parameters={
 	--learningRate= {1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1},
 	--learningRateDecay= {0.01, 0.1, 0.5, 1},
-	--momentum= {0.1, 0.5, 0.9, 0.99, 0.999},
+	momentum= {0.1, 0.5, 0.9, 0.99, 0.999},
 	--lambda= {1e-4, 1e-3, 1e-2, 1e-1, 0.5},
 	--alpha= {0.5, 0.75, 1.0},
 	--decay= {1-1e-4, 1-1e-3, 1-1e-2, 1-1e-1, 1-0.5},
@@ -21,12 +21,13 @@ local algorithms={
 	--sgd_annealing= {fun='sgd', learningRate=parameters.learningRate, learningRateDecay=parameters.learningRateDecay},
 	--sgd_momentum= {fun='sgd', learningRate=parameters.learningRate, momentum=parameters.momentum},
 	--sgd_averaging= {fun='asgd', eta0=parameters.learningRate, lambda=parameters.lambda, alpha=parameters.alpha, t0=0},
-	--sgd_nesterov= {fun='nesterov', learningRate=parameters.learningRate, momentum=parameters.momentum},
+	sgd_nesterov= {fun='nag', learningRate=parameters.learningRate, momentum=parameters.momentum},
 	--rmsprop= {fun='rmsprop', learningRate=parameters.learningRate, decay=parameters.decay, maxLearningRate=parameters.maxLearningRate},
 	--rprop= {fun='rprop', stepsize=parameters.stepsize},
 	--adagrad= {fun='adagrad', learningRate=parameters.learningRate},
 	--adadelta= {fun='adadelta', decay=parameters.decay, epsilon=parameters.epsilon},
-	--cg= {fun='cg'},
+	cg= {fun='cg'},
+	sgdols= {fun='sgdols'},
 	--idbd= {fun='idbd'}
 }
 
