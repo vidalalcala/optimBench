@@ -27,7 +27,8 @@ local algorithms={
 	--adagrad= {fun='adagrad', learningRate=parameters.learningRate},
 	--adadelta= {fun='adadelta', decay=parameters.decay, epsilon=parameters.epsilon},
 	cg= {fun='cg'},
-	sgdols= {fun='sgdols'},
+	sgdols= {fun='sgdols',learningRate=parameters.sgdLearningRate},
+	sgdsvd= {fun='sgdsvd',learningRate=parameters.sgdLearningRate}
 	--idbd= {fun='idbd'}
 }
 
